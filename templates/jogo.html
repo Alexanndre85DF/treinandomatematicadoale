@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Tabuada</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="fundo">
+    <div class="container">
+        <h1>Exercitando a Tabuada</h1>
+        <form method="POST" action="/verificar">
+            <label for="num1">Escolha o primeiro número:</label>
+            <select name="num1" id="num1">
+                {% for i in range(0, 11) %}
+                <option value="{{ i }}" {% if i == num1 %}selected{% endif %}>{{ i }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="num2">Escolha o segundo número:</label>
+            <select name="num2" id="num2">
+                {% for i in range(0, 11) %}
+                <option value="{{ i }}" {% if i == num2 %}selected{% endif %}>{{ i }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="resposta">Digite sua resposta:</label>
+            <input type="text" name="resposta" id="resposta" required>
+
+            <button type="submit" class="submit-btn">Verificar</button>
+        </form>
+
+        {% if mensagem %}
+            <p class="mensagem">{{ mensagem }}</p>
+        {% endif %}
+
+        <button onclick="window.location.href='/'" class="voltar-btn">Voltar</button>
+    </div>
+</body>
+</html>
