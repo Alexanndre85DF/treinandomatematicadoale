@@ -1,41 +1,92 @@
-body.fundo {
-    background: url("../images/tabuada.png") no-repeat center center fixed;
-    background-size: cover;
-    color: black;
-    text-align: center;
+/* Define o estilo global */
+body {
     font-family: 'Arial', sans-serif;
+    background: url("../images/tabuada.png") no-repeat center center fixed; /* Imagem de fundo */
+    background-size: 80%; /* Reduz o "zoom" da imagem */
+    color: black; /* Letras pretas */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Define a altura como 100% da tela */
 }
 
+/* Estilo do contêiner central */
 .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 120px;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 800spx;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-top: 100px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
 }
 
+/* Título */
 h1 {
     font-size: 48px;
+    margin-bottom: 40px;
 }
 
-button.iniciar-btn, button.submit-btn, button.voltar-btn {
-    font-size: 25px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #ffffff;
-    color: #000000;
+/* Estilo do botão Iniciar */
+.iniciar-btn {
+    font-size: 28px;
+    padding: 20px 40px;
+    background-color: #FF6347; /* Cor do botão */
     border: none;
-    border-radius: 10px;
+    border-radius: 30px; /* Bordas arredondadas */
+    color: white;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+/* Estilo do botão ao passar o mouse */
+.iniciar-btn:hover {
+    background-color: #FF4500;
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+/* Estilos para a página de exercícios */
+label, select, input {
+    font-size: 32px; /* Aumenta o tamanho do texto dos números */
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    width: 200px; /* Aumenta a largura das caixas de seleção */
+}
+
+button.submit-btn {
+    font-size: 32px;
+    padding: 15px 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 30px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #f0f0f0;
+button.submit-btn:hover {
+    background-color: #45a049;
 }
 
-footer {
+.mensagem {
+    font-size: 26px;
     margin-top: 20px;
-    font-size: 16px;
+}
+/* Estilo para o botão Voltar */
+button.voltar-btn {
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 24px;
+    background-color: #4CAF50; /* mesma cor do Verificar */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
 }
